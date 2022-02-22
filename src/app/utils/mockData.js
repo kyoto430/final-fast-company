@@ -11,7 +11,7 @@ const useMockData = () => {
         successed: "Ready",
         error: "Error occured"
     };
-    const [error, setError] = useState(null);
+    const [error] = useState(null);
     const [status, setStatus] = useState(statusConsts.idle);
     const [progress, setProgress] = useState(0);
     const [count, setCount] = useState(0);
@@ -50,7 +50,7 @@ const useMockData = () => {
                 incrementCount();
             }
         } catch (error) {
-            setError(error);
+            // setError(error);
             setStatus(statusConsts.error);
         }
     }
