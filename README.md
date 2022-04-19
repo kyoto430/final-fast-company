@@ -1,2 +1,5 @@
 # Finish prject - fast-company 
-# Stack: React, Redux, Firebase
+
+-React
+-Redux
+-Firebase
