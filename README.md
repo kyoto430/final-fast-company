@@ -1,5 +1,5 @@
-# Finish prject - fast-company 
+# Fast company
 
--React
--Redux
--Firebase
+- React
+- Redux
+- Firebase
