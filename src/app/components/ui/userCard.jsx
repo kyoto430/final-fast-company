@@ -15,10 +15,10 @@ const UserCard = ({ user }) => {
             <div className="card-body">
                 {currentUser._id === user._id && (
                     <button
-                        className="position-absolute top-0 end-0 btn btn-light btn-sm"
+                        className="position-absolute top-0 end-0 btn btn-sm btn-primary"
                         onClick={handleClick}
                     >
-                        <i className="bi bi-gear"></i>
+                        Редактировать <i className="bi bi-gear"></i>
                     </button>
                 )}
 

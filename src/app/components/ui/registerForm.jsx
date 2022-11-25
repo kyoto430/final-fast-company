@@ -61,7 +61,7 @@ const RegisterForm = () => {
         },
         password: {
             isRequired: {
-                message: "Пароль обязательна для заполнения"
+                message: "Пароль обязателен для заполнения"
             },
             isCapitalSymbol: {
                 message: "Пароль должен содержать хотя бы одну заглавную букву"
@@ -132,8 +132,8 @@ const RegisterForm = () => {
                 error={errors.password}
             />
             <SelectField
-                label="Выбери свою профессию"
-                defaultOption="Choose..."
+                label="Выберите свою профессию"
+                defaultOption="Выбрать..."
                 name="profession"
                 options={professionsList}
                 onChange={handleChange}
@@ -142,9 +142,8 @@ const RegisterForm = () => {
             />
             <RadioField
                 options={[
-                    { name: "Male", value: "male" },
-                    { name: "Female", value: "female" },
-                    { name: "Other", value: "other" }
+                    { name: "Мужской", value: "male" },
+                    { name: "Женский", value: "female" }
                 ]}
                 value={data.sex}
                 name="sex"
@@ -155,7 +154,7 @@ const RegisterForm = () => {
                 options={qualitiesList}
                 onChange={handleChange}
                 name="qualities"
-                label="Выберите ваши качесвта"
+                label="Выберите ваши интересы"
             />
             <CheckBoxField
                 value={data.licence}
@@ -170,7 +169,7 @@ const RegisterForm = () => {
                 disabled={!isValid}
                 className="btn btn-primary w-100 mx-auto"
             >
-                Submit
+                Отправить
             </button>
         </form>
     );

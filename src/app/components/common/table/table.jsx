@@ -5,14 +5,16 @@ import TableHeader from "./tableHeader";
 
 const Table = ({ onSort, selectedSort, columns, data, children }) => {
     return (
-        <table className="table">
-            {children || (
-                <>
-                    <TableHeader {...{ onSort, selectedSort, columns }} />
-                    <TableBody {...{ columns, data }} />
-                </>
-            )}
-        </table>
+        <div className="table-responsive-lg">
+            <table className="table table-hover">
+                {children || (
+                    <>
+                        <TableHeader {...{ onSort, selectedSort, columns }} />
+                        <TableBody {...{ columns, data }} />
+                    </>
+                )}
+            </table>
+        </div>
     );
 };
 Table.propTypes = {

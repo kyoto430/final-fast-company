@@ -37,7 +37,7 @@ const Comments = () => {
             {sortedComments.length > 0 && (
                 <div className="card mb-3">
                     <div className="card-body ">
-                        <h2>Comments</h2>
+                        <h2>Сообщения</h2>
                         <hr />
                         {!isLoading ? (
                             <CommentsList
@@ -45,7 +45,7 @@ const Comments = () => {
                                 onRemove={handleRemoveComment}
                             />
                         ) : (
-                            "loading..."
+                            "Загрузка..."
                         )}
                     </div>
                 </div>

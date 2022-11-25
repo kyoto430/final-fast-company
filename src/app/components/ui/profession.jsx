@@ -11,7 +11,7 @@ const Profession = ({ id }) => {
     const prof = useSelector(getProfessionbyId(id));
     if (!isLoading) {
         return <p>{prof.name}</p>;
-    } else return "loading ...";
+    } else return "Загрузка...";
 };
 Profession.propTypes = {
     id: PropTypes.string

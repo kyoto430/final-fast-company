@@ -36,13 +36,13 @@ const AddCommentForm = ({ onSubmit }) => {
         const isValid = validate();
         if (!isValid) return;
         onSubmit(data);
-        console.log(data);
+        console.log(data.content);
         clearForm();
     };
 
     return (
         <div>
-            <h2>New comment</h2>
+            <h2>Новый комментарий</h2>
             <form onSubmit={handleSubmit}>
                 <TextAreaField
                     value={data.content || ""}

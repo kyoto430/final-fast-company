@@ -23,7 +23,7 @@ const TableHeader = ({ onSort, selectedSort, columns }) => {
     };
 
     return (
-        <thead>
+        <thead className="table-dark">
             <tr>
                 {Object.keys(columns).map((column) => (
                     <th

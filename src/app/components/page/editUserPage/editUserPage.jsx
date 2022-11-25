@@ -132,8 +132,8 @@ const EditUserPage = () => {
                                 error={errors.email}
                             />
                             <SelectField
-                                label="Выбери свою профессию"
-                                defaultOption="Choose..."
+                                label="Выберите свою профессию"
+                                defaultOption="Выбор..."
                                 name="profession"
                                 options={professionsList}
                                 onChange={handleChange}
@@ -142,9 +142,8 @@ const EditUserPage = () => {
                             />
                             <RadioField
                                 options={[
-                                    { name: "Male", value: "male" },
-                                    { name: "Female", value: "female" },
-                                    { name: "Other", value: "other" }
+                                    { name: "Мужской", value: "male" },
+                                    { name: "Женский", value: "female" }
                                 ]}
                                 value={data.sex}
                                 name="sex"
@@ -156,7 +155,7 @@ const EditUserPage = () => {
                                 options={qualitiesList}
                                 onChange={handleChange}
                                 name="qualities"
-                                label="Выберите ваши качесвта"
+                                label="Выберите ваши интересы"
                             />
                             <button
                                 type="submit"
@@ -167,7 +166,7 @@ const EditUserPage = () => {
                             </button>
                         </form>
                     ) : (
-                        "Loading..."
+                        "Загрузка..."
                     )}
                 </div>
             </div>

@@ -3,13 +3,7 @@ import PropTypes from "prop-types";
 import { displayDate } from "../../../utils/displayDate";
 import { getCurrentUserId, getUserById } from "../../../store/users";
 import { useSelector } from "react-redux";
-const Comment = ({
-    content,
-    created_at: created,
-    _id: id,
-    userId,
-    onRemove
-}) => {
+const Comment = ({ data, created_at: created, _id: id, userId, onRemove }) => {
     const currentUserId = useSelector(getCurrentUserId());
     const user = useSelector(getUserById(userId));
 
@@ -43,7 +37,7 @@ const Comment = ({
                                         </button>
                                     )}
                                 </div>
-                                <p className="small mb-0">{content}</p>
+                                <p className="small mb-0">{data.content}</p>
                             </div>
                         </div>
                     </div>
@@ -53,7 +47,7 @@ const Comment = ({
     );
 };
 Comment.propTypes = {
-    content: PropTypes.string,
+    data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     edited_at: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     created_at: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     userId: PropTypes.string,

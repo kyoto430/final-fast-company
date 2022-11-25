@@ -20,19 +20,19 @@ const SelectField = ({
     const optionsArray =
         !Array.isArray(options) && typeof options === "object"
             ? Object.keys(options).map((optionName) => ({
-                  name: options[optionName].name,
-                  value: options[optionName]._id
+                  _id: options[optionName]._id,
+                  name: options[optionName].name
               }))
             : options;
 
     return (
         <div className="mb-4">
-            <label htmlFor="validationCustom04" className="form-label">
+            <label htmlFor={name} className="form-label">
                 {label}
             </label>
             <select
                 className={getInputClasses()}
-                id="validationCustom04"
+                id={name}
                 name={name}
                 value={value}
                 onChange={handleChange}
@@ -42,8 +42,8 @@ const SelectField = ({
                 </option>
                 {optionsArray &&
                     optionsArray.map((option) => (
-                        <option value={option.value} key={option.value}>
-                            {option.label}
+                        <option value={option.name} key={option._id}>
+                            {option.name}
                         </option>
                     ))}
             </select>

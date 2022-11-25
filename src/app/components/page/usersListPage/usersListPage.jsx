@@ -81,9 +81,9 @@ const UsersListPage = () => {
     };
 
     return (
-        <div className="d-flex">
+        <div className="d-flex justify-content-center container">
             {professions && !professionsLoading && (
-                <div className="d-flex flex-column flex-shrink-0 p-3">
+                <div className="d-flex flex-column justify-content-center flex-shrink-0 p-3 card">
                     <GroupList
                         selectedItem={selectedProf}
                         items={professions}
@@ -97,12 +97,13 @@ const UsersListPage = () => {
                     </button>
                 </div>
             )}
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column container">
                 <SearchStatus length={count} />
                 <input
+                    className="input-search"
                     type="text"
                     name="searchQuery"
-                    placeholder="Search..."
+                    placeholder="Найти..."
                     onChange={handleSearchQuery}
                     value={searchQuery}
                 />

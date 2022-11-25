@@ -7,22 +7,40 @@ import NavProfile from "./navProfile";
 const NavBar = () => {
     const isLoggedIn = useSelector(getIsLoggedIn());
     return (
-        <nav className="navbar bg-light mb-3">
+        <nav className="navbar bg-white fs-6 mb-3 container">
             <div className="container-fluid">
                 <ul className="nav">
                     <li className="nav-item">
-                        <Link className="nav-link " aria-current="page" to="/">
-                            Main
+                        <Link className="nav-link" aria-current="page" to="/">
+                            <i className="bi bi-house"></i>Главная
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link
+                            className="nav-link"
+                            aria-current="page"
+                            to="/addEvent"
+                        >
+                            Добавить новое событие
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link
+                            className="nav-link"
+                            aria-current="page"
+                            to="/articles"
+                        >
+                            События
                         </Link>
                     </li>
                     {isLoggedIn && (
                         <li className="nav-item">
                             <Link
-                                className="nav-link "
+                                className="nav-link"
                                 aria-current="page"
                                 to="/users"
                             >
-                                Users
+                                <i className="bi bi-people"></i>Участники
                             </Link>
                         </li>
                     )}
@@ -32,11 +50,11 @@ const NavBar = () => {
                         <NavProfile />
                     ) : (
                         <Link
-                            className="nav-link "
+                            className="nav-link"
                             aria-current="page"
                             to="/login"
                         >
-                            Login
+                            <i className="bi bi-box-arrow-in-left"></i>Войти
                         </Link>
                     )}
                 </div>

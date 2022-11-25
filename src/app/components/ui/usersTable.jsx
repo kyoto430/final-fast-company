@@ -23,7 +23,7 @@ const UserTable = ({
             )
         },
         qualities: {
-            name: "Качества",
+            name: "Интересы",
             component: (user) => <Qualities qualities={user.qualities} />
         },
         professions: {
@@ -34,7 +34,7 @@ const UserTable = ({
             path: "completedMeetings",
             name: "Встретился, раз"
         },
-        rate: { path: "rate", name: "Оценка" },
+        rate: { path: "rate", name: "Рейтинг" },
         bookmark: {
             path: "bookmark",
             name: "Избранное",

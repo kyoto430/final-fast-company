@@ -7,7 +7,7 @@ const LogOut = () => {
         console.log("logout");
         dispatch(logOut());
     }, []);
-    return <h1>Loading</h1>;
+    return <h1>Загрузка...</h1>;
 };
 
 export default LogOut;

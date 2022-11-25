@@ -32,7 +32,7 @@ const LoginForm = () => {
         },
         password: {
             isRequired: {
-                message: "Пароль обязателкн для заполнения"
+                message: "Пароль обязателен для заполнения"
             }
         }
     };
@@ -87,7 +87,7 @@ const LoginForm = () => {
                 disabled={!isValid}
                 className="btn btn-primary w-100 mx-auto"
             >
-                Submit
+                Отправить
             </button>
         </form>
     );
