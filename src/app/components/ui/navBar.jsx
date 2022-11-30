@@ -7,7 +7,7 @@ import NavProfile from "./navProfile";
 const NavBar = () => {
     const isLoggedIn = useSelector(getIsLoggedIn());
     return (
-        <nav className="navbar bg-white fs-6 mb-3 container">
+        <nav className="navbar bg-white fs-5 mb-3 container">
             <div className="container-fluid">
                 <ul className="nav">
                     <li className="nav-item">
@@ -15,15 +15,17 @@ const NavBar = () => {
                             <i className="bi bi-house"></i>Главная
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <Link
-                            className="nav-link"
-                            aria-current="page"
-                            to="/addEvent"
-                        >
-                            Добавить новое событие
-                        </Link>
-                    </li>
+                    {isLoggedIn && (
+                        <li className="nav-item">
+                            <Link
+                                className="nav-link"
+                                aria-current="page"
+                                to="/addEvent"
+                            >
+                                Добавить новое событие
+                            </Link>
+                        </li>
+                    )}
                     <li className="nav-item">
                         <Link
                             className="nav-link"

@@ -22,13 +22,16 @@ function App() {
                         path="/users/:userId?/:edit?"
                         component={Users}
                     />
+                    <ProtectedRoute
+                        path="/addEvent"
+                        component={AddArticlePage}
+                    />
                     <Route
                         path="/articles/:articleId?/:edit?"
                         component={Events}
                     />
                     <Route path="/login/:type?" component={Login} />
                     <Route path="/logout" component={LogOut} />
-                    <Route path="/addEvent" component={AddArticlePage} />
                     <Route path="/" exact component={Main} />
                     <Redirect to="/" />
                 </Switch>

@@ -153,7 +153,7 @@ const AddArticlePage = () => {
                                 name="adress"
                                 value={data.adress}
                                 onChange={handleChange}
-                                error={errors.date}
+                                error={errors.adress}
                             />
                             <TextField
                                 label="URL изображения"

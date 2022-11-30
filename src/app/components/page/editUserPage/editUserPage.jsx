@@ -29,10 +29,10 @@ const EditUserPage = () => {
     }));
     const professions = useSelector(getProfessions());
     const professionLoading = useSelector(getProfessionsLoadingStatus());
-    const professionsList = professions.map((p) => ({
-        label: p.name,
-        value: p._id
-    }));
+    // const professionsList = professions.map((p) => ({
+    //     label: p.name,
+    //     value: p._id
+    // }));
 
     const [errors, setErrors] = useState({});
 
@@ -135,7 +135,7 @@ const EditUserPage = () => {
                                 label="Выберите свою профессию"
                                 defaultOption="Выбор..."
                                 name="profession"
-                                options={professionsList}
+                                options={professions}
                                 onChange={handleChange}
                                 value={data.profession}
                                 error={errors.profession}

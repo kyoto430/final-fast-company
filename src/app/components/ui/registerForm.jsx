@@ -29,10 +29,11 @@ const RegisterForm = () => {
     }));
     const professions = useSelector(getProfessions());
 
-    const professionsList = professions.map((p) => ({
-        label: p.name,
-        value: p._id
-    }));
+    // const professionsList = professions.map((p) => ({
+    //     label: p.name,
+    //     value: p._id
+    // }));
+    // console.log(professionsList);
     const [errors, setErrors] = useState({});
 
     const handleChange = (target) => {
@@ -135,7 +136,7 @@ const RegisterForm = () => {
                 label="Выберите свою профессию"
                 defaultOption="Выбрать..."
                 name="profession"
-                options={professionsList}
+                options={professions}
                 onChange={handleChange}
                 value={data.profession}
                 error={errors.profession}
