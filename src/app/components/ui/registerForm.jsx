@@ -16,7 +16,7 @@ const RegisterForm = () => {
         email: "",
         password: "",
         profession: "",
-        sex: "male",
+        sex: "Мужской",
         name: "",
         qualities: [],
         licence: false
@@ -29,11 +29,11 @@ const RegisterForm = () => {
     }));
     const professions = useSelector(getProfessions());
 
-    // const professionsList = professions.map((p) => ({
-    //     label: p.name,
-    //     value: p._id
-    // }));
-    // console.log(professionsList);
+    const professionsList = professions.map((p) => ({
+        name: p.name,
+        value: p._id
+    }));
+
     const [errors, setErrors] = useState({});
 
     const handleChange = (target) => {
@@ -136,7 +136,7 @@ const RegisterForm = () => {
                 label="Выберите свою профессию"
                 defaultOption="Выбрать..."
                 name="profession"
-                options={professions}
+                options={professionsList}
                 onChange={handleChange}
                 value={data.profession}
                 error={errors.profession}

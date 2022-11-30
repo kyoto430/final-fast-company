@@ -4,9 +4,9 @@ const SearchStatus = ({ length }) => {
     const renderPhrase = (number) => {
         const lastOne = Number(number.toString().slice(-1));
         if (number > 4 && number < 15) {
-            return "человек встретит";
+            return "человек встретятся";
         }
-        if (lastOne === 1) return "человек встретит";
+        if (lastOne === 1) return "человек встретится";
         if ([2, 3, 4].indexOf(lastOne) >= 0) return "человека встретятся";
         return "человек встретится";
     };

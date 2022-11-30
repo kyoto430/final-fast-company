@@ -32,7 +32,7 @@ const Article = ({
                     <div className="card-body">
                         <div className="d-flex justify-content-end align-items-center">
                             <span className="badge bg-dark text-white m-1">
-                                {ligue.name}
+                                {ligue?.name}
                             </span>
                             <TagsList tags={tags} />
                         </div>

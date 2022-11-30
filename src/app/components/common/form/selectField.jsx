@@ -24,7 +24,6 @@ const SelectField = ({
                   name: options[optionName].name
               }))
             : options;
-
     return (
         <div className="mb-4">
             <label htmlFor={name} className="form-label">
@@ -42,7 +41,10 @@ const SelectField = ({
                 </option>
                 {optionsArray &&
                     optionsArray.map((option) => (
-                        <option value={option.name} key={option._id}>
+                        <option
+                            value={option.value}
+                            key={option.value || option._id}
+                        >
                             {option.name}
                         </option>
                     ))}
