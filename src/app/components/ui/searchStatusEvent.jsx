@@ -5,7 +5,7 @@ const searchStatusEvent = ({ length }) => {
     return (
         <div className={"badge bg-" + (length > 0 ? "primary" : "danger")}>
             {length ? (
-                <h3>Мероприятий и встреч: {length}</h3>
+                <h3>Найдено мероприятий: {length}</h3>
             ) : (
                 <h3>Мероприятия отсутствуют!</h3>
             )}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import _ from "lodash";
 import { paginate } from "../../../utils/paginate";
+
 import API from "../../../api";
 import GroupList from "../../common/groupList";
 import SearchStatusEvent from "../../ui/searchStatusEvent";
@@ -29,11 +30,11 @@ const ArticlesList = () => {
         setCurrentPage(1);
     }, [selectedLigue, searchQuery]);
 
-    const handleDelete = (articleId) => {
-        setArticles(articles.filter((article) => article._id !== articleId));
-    };
+    // const handleDelete = (articleId) => {
+    //     setArticles(articles.filter((article) => article._id !== articleId));
+    // };
+
     const handleToggleBookMark = (id) => {
-        console.log(`click ${id}`);
         setArticles(
             articles.map((article) => {
                 if (article._id === id) {
@@ -86,31 +87,33 @@ const ArticlesList = () => {
         const articleCrop = paginate(sortedArticles, currentPage, pageSize);
 
         return (
-            <div className="d-flex container">
+            <div className="d-flex flex-column ">
                 {ligues && (
-                    <div className="col-2 d-flex flex-column p-3">
+                    <div className="d-flex flex-column p-3">
                         <GroupList
                             items={ligues}
                             onItemSelect={handleLiguesSelect}
                             selectedItem={selectedLigue}
                         />
-                        <button
-                            className="btn btn-secondary mt-2"
-                            onClick={clearFilter}
-                        >
-                            Очистить
-                        </button>
-                        <input
-                            className="input-search mt-1"
-                            type="text"
-                            name="searchQuery"
-                            placeholder="Найти..."
-                            onChange={handleSearchQuery}
-                            value={searchQuery}
-                        ></input>
+                        <div className="d-flex align-items-center justify-content-center mt-3">
+                            <input
+                                className="input-search mt-1 w-50"
+                                type="text"
+                                name="searchQuery"
+                                placeholder="Найти..."
+                                onChange={handleSearchQuery}
+                                value={searchQuery}
+                            ></input>
+                            <button
+                                className="btn btn-secondary w-10 mx-2"
+                                onClick={clearFilter}
+                            >
+                                Очистить
+                            </button>
+                        </div>
                     </div>
                 )}
-                <div className="col-10 d-flex flex-column align-items-center p-3">
+                <div className="d-flex flex-column align-items-center p-3">
                     <SearchStatusEvent length={count} />
 
                     {count > 0 && (
@@ -118,7 +121,7 @@ const ArticlesList = () => {
                             articles={articleCrop}
                             onSort={handleSort}
                             selectedSort={sortBy}
-                            onDelete={handleDelete}
+                            // onDelete={handleDelete}
                             onToggleBookMark={handleToggleBookMark}
                         />
                     )}

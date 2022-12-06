@@ -10,10 +10,14 @@ const GroupList = ({
 }) => {
     if (!Array.isArray(items)) {
         return (
-            <ul className="list-group text-center">
+            <ul className="list-group list-group-horizontal d-flex justify-content-around">
                 {Object.keys(items).map((item) => (
                     <li
                         key={items[item][valueProperty]}
+                        style={{
+                            textTransform: "uppercase",
+                            borderRadius: "5px"
+                        }}
                         className={
                             "list-group-item" +
                             (items[item] === selectedItem ? " active" : "")

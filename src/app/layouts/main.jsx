@@ -7,7 +7,7 @@ const Main = () => {
     //     initialize();
     // };
     return (
-        <div className="container mt-5 bg-primary card">
+        <div className="container mt-5 bg-primary card ">
             {/* <h1> Main Page</h1>
             <h3>Инициализация данных в FireBase</h3>
             <ul>

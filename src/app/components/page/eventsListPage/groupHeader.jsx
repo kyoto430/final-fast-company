@@ -23,14 +23,20 @@ const GroupHeader = ({ onSort, selectedSort, columns }) => {
         return null;
     };
     return (
-        <div className="d-flex mt-1 flex-wrap">
-            <div className="m-1 fw-bold fs-6">Сортировать по:</div>
+        <div className="d-flex mt-1 flex-wrap align-items-center">
+            <div className="fw-bold fs-6">Сортировать по:</div>
             {Object.keys(columns).map((column) => (
                 <span
                     key={column}
                     onClick={() => handleSort(columns[column].iter)}
                     className="m-1 fs-6"
-                    style={{ textDecoration: "underline" }}
+                    style={{
+                        backgroundColor: "#F7AB0A",
+                        borderRadius: "5px",
+                        color: "white",
+                        padding: "5px",
+                        textTransform: "uppercase"
+                    }}
                     role={"button"}
                 >
                     {columns[column].title}

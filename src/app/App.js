@@ -11,10 +11,17 @@ import AddArticlePage from "./components/page/eventsListPage/addArticlePage";
 import ProtectedRoute from "./components/common/protectedRoute";
 import LogOut from "./layouts/logOut";
 import AppLoader from "./components/ui/hoc/appLoader";
+import CartPage from "./components/page/cartPage";
 
 function App() {
     return (
-        <div>
+        <div
+            className="container shadow"
+            style={{
+                borderBottomRightRadius: "10px",
+                borderBottomLeftRadius: "10px"
+            }}
+        >
             <AppLoader>
                 <NavBar />
                 <Switch>
@@ -26,6 +33,7 @@ function App() {
                         path="/addEvent"
                         component={AddArticlePage}
                     />
+                    <ProtectedRoute path="/order" component={CartPage} />
                     <Route
                         path="/articles/:articleId?/:edit?"
                         component={Events}

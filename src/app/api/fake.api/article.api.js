@@ -19,7 +19,8 @@ const articles = [
         update: "Пн. - вс.: 11:00 - 19:00",
         image: "https://ms1.relax.by/images/d4b21593f3f04b3b118e37d5e68927ff/thumb/w%3D400%2Ch%3D600%2Cq%3D90/afisha_event_photo/50/97/65/5097653883533eb729395491e4e82ea9.jpg",
         adress: "ул. К. Маркса, 12",
-        bookmark: false
+        bookmark: false,
+        price: 50
     },
     {
         _id: "67rdca1816",
@@ -31,7 +32,8 @@ const articles = [
         update: "14:00",
         image: "https://ms1.relax.by/images/d4b21593f3f04b3b118e37d5e68927ff/thumb/w%3D400%2Ch%3D600%2Cq%3D90/afisha_event_photo/24/c3/11/24c311a5e9277d12ab5164a8a3259058.jpg",
         adress: "ул. Притыцкого, 83",
-        bookmark: false
+        bookmark: false,
+        price: 150
     },
     {
         _id: "67rdca1817",
@@ -43,7 +45,8 @@ const articles = [
         update: "Пн. - вс.: 11:00 - 19:00",
         image: "https://ms1.relax.by/images/d4b21593f3f04b3b118e37d5e68927ff/thumb/w%3D400%2Ch%3D600%2Cq%3D90/afisha_event_photo/c5/3e/59/c53e5965ccdc58a04c4adefbf0c450a8.jpg",
         adress: "ул. Богдановича, 9А",
-        bookmark: false
+        bookmark: false,
+        price: 20
     },
     {
         _id: "67rdca1818",
@@ -55,7 +58,8 @@ const articles = [
         update: "18:40",
         image: "https://ms1.relax.by/images/d4b21593f3f04b3b118e37d5e68927ff/thumb/w%3D400%2Ch%3D600%2Cq%3D90/afisha_event_photo/62/f6/18/62f6183fab964696a1025b4215f56393.jpg",
         adress: "ул. Козлова, 4а",
-        bookmark: false
+        bookmark: false,
+        price: 80
     }
 ];
 

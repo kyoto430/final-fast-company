@@ -7,7 +7,6 @@ const ArticlesGroup = ({
     articles,
     onSort,
     selectedSort,
-    onDelete,
     onToggleBookMark
 }) => {
     const columns = {
@@ -19,12 +18,12 @@ const ArticlesGroup = ({
     return (
         <>
             <GroupHeader {...{ onSort, selectedSort, columns }} />
-            <div className="d-flex flex-row justify-content-around flex-wrap w-100">
+            <div className="d-flex flex-row justify-content-around">
                 {articles.map((article) => (
                     <Article
                         key={article._id}
                         {...article}
-                        {...{ onDelete, onToggleBookMark }}
+                        // {...{ onToggleBookMark }}
                     />
                 ))}
             </div>
@@ -36,7 +35,6 @@ ArticlesGroup.propTypes = {
     articles: PropTypes.array.isRequired,
     onSort: PropTypes.func.isRequired,
     selectedSort: PropTypes.object.isRequired,
-    onDelete: PropTypes.func.isRequired,
     onToggleBookMark: PropTypes.func
 };
 
