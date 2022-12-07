@@ -20,6 +20,7 @@ const AddArticlePage = () => {
         tags: [],
         date: "",
         adress: "",
+        price: "",
         bookmark: false,
         image: ""
     });
@@ -73,6 +74,11 @@ const AddArticlePage = () => {
         adress: {
             isRequired: {
                 message: "Адрес обязателен для заполнения"
+            }
+        },
+        price: {
+            isRequired: {
+                message: "Цена обязательна для заполнения"
             }
         }
     };
@@ -154,6 +160,13 @@ const AddArticlePage = () => {
                                 value={data.adress}
                                 onChange={handleChange}
                                 error={errors.adress}
+                            />
+                            <TextField
+                                label="Цена билета"
+                                name="price"
+                                value={data.price}
+                                onChange={handleChange}
+                                error={errors.price}
                             />
                             <TextField
                                 label="URL изображения"

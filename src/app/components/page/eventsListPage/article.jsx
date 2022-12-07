@@ -1,43 +1,62 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BookMark from "../../common/bookmark";
-import TagsList from "../../ui/tags/tagsList";
+// import BookMark from "../../common/bookmark";
+// import TagsList from "../../ui/tags/tagsList";
 import PropTypes from "prop-types";
+import CartBuy from "../../ui/cartBuy";
+import { BiTimeFive } from "react-icons/bi";
 
-const Article = ({
-    _id,
-    image,
-    title,
-    ligue,
-    tags,
-    text,
-    update,
-    adress,
-    date,
-    onDelete,
-    bookmark,
-    onToggleBookMark
-}) => {
+const Article = (article) => {
+    const {
+        _id,
+        image,
+        title,
+        ligue,
+        // tags
+        // update,
+        // adress,
+        date
+        // bookmark
+        // onToggleBookMark
+    } = article;
+
     return (
-        <div className="card text-dark w-50">
-            <div className="row g-0">
-                <div className="col-md-4 d-flex align-items-center">
-                    <img
-                        src={image}
-                        className="img-fluid rounded-start"
-                        alt={title}
-                    />
-                </div>
-                <div className="col-md-8 d-flex align-items-center">
-                    <div className="card-body">
-                        <div className="d-flex justify-content-end align-items-center">
-                            <span className="badge bg-dark text-white m-1">
-                                {ligue?.name}
-                            </span>
-                            <TagsList tags={tags} />
+        <div className="d-flex flex-column w-100 p-1">
+            <Link to={`/articles/${_id}`}>
+                <div className="card text-dark m-1">
+                    <span
+                        style={{ backgroundColor: "rgb(85, 88, 237)" }}
+                        className="badge text-white m-1"
+                    >
+                        {ligue?.name}
+                    </span>
+                    <div className="">
+                        <div className="d-flex align-items-center">
+                            <img
+                                style={{
+                                    borderRadius: "10px"
+                                }}
+                                src={image}
+                                className="img-fluid p-1 m-auto"
+                                alt={title}
+                            />
                         </div>
-                        <h5 className="card-title text-center">{title}</h5>
-                        {/* <p className="card-text">
+                        <div className="d-flex align-items-center">
+                            <div className="card-body">
+                                {/* <div className="d-flex justify-content-end align-items-center">
+                            <TagsList tags={tags} />
+                        </div> */}
+                                <h5
+                                    style={{ height: "70px" }}
+                                    className="card-title text-start fs-6"
+                                >
+                                    {title}
+                                </h5>
+                                <div className="d-flex align-items-center">
+                                    <BiTimeFive />
+                                    {date}
+                                </div>
+                                {/* <p className="card-text">
                             {text &&
                                 text.slice(
                                     0,
@@ -46,30 +65,21 @@ const Article = ({
                                         : text.length
                                 ) + "..."}
                         </p> */}
-                        <div className="d-flex flex-column align-items-center">
-                            <p>Дата проведения: {date}</p>
+                                {/* <div className="d-flex flex-column align-items-center">
                             <p>Время проведения: {update}</p>
                             <p>Адресс: {adress}</p>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center">
-                            <Link to={`/articles/${_id}`}>
-                                <button className="btn btn btn-primary">
-                                    Открыть
-                                </button>
-                            </Link>
-                            <BookMark
-                                status={bookmark}
-                                onClick={() => onToggleBookMark(_id)}
-                            />
-                            <button
-                                className="btn btn-danger"
-                                onClick={() => onDelete(_id)}
-                            >
-                                Удалить
-                            </button>
+                        </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>
+            </Link>
+            <div className="d-flex justify-content-center align-items-center">
+                {/* <BookMark
+                                status={bookmark}
+                                onClick={() => onToggleBookMark(_id)}
+                            /> */}
+                <CartBuy article={article} />
             </div>
         </div>
     );
@@ -83,7 +93,6 @@ Article.propTypes = {
     tags: PropTypes.array,
     text: PropTypes.string,
     adress: PropTypes.string,
-    onDelete: PropTypes.func,
     bookmark: PropTypes.bool,
     status: PropTypes.bool,
     update: PropTypes.string,
