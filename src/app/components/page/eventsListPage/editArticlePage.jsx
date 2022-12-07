@@ -20,6 +20,7 @@ const EditArticlePage = () => {
         tags: [],
         date: "",
         adress: "",
+        price: "",
         bookmark: false,
         image: ""
     });
@@ -148,6 +149,12 @@ const EditArticlePage = () => {
                                 label="Адрес события"
                                 name="adress"
                                 value={data.adress}
+                                onChange={handleChange}
+                            />
+                            <TextField
+                                label="Цена билета"
+                                name="price"
+                                value={data.price}
                                 onChange={handleChange}
                             />
                             <TextField

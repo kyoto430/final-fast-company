@@ -55,7 +55,7 @@ const NavBar = () => {
                         </li>
                     )}
                 </ul>
-                <div className="d-flex">
+                <div className="d-flex align-items-center justify-content-between">
                     {isLoggedIn && (
                         <Link
                             className="nav-link text-white"

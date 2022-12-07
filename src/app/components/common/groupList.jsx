@@ -16,7 +16,8 @@ const GroupList = ({
                         key={items[item][valueProperty]}
                         style={{
                             textTransform: "uppercase",
-                            borderRadius: "5px"
+                            borderRadius: "5px",
+                            border: "1px solid #edebe6"
                         }}
                         className={
                             "list-group-item" +

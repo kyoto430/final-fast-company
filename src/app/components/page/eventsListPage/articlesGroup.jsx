@@ -12,7 +12,7 @@ const ArticlesGroup = ({
     const columns = {
         title: { iter: "title", title: "названию" },
         ligues: { iter: "ligue.name", title: "категории" },
-        bookmark: { iter: "bookmark", title: "избранному" },
+        // bookmark: { iter: "bookmark", title: "избранному" },
         update: { iter: "update", title: "времени" }
     };
     return (

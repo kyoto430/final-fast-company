@@ -17,7 +17,7 @@ const Login = () => {
     return (
         <div className="container mt-5">
             <div className="row">
-                <div className="col-md-6 offset-md-3 shadow p-4">
+                <div className="col-md-6 offset-md-3 mb-5 shadow p-4">
                     {formType === "register" ? (
                         <>
                             <h3 className="mb-4">Зарегистрироваться</h3>

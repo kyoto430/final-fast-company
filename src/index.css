@@ -140,12 +140,11 @@ a {
 }
 
 .article-page__title {
-    text-align: center;
 }
 
 .article-page__image {
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    width: "300px";
+    border-radius: 15px;
 }
 
 .article-page__content {
@@ -153,11 +152,11 @@ a {
 }
 
 .article-page__left {
-    width: 70%;
+    width: 50%;
 }
 
 .article-page__right {
-    width: 30%;
+    width: 50%;
 }
 
 .article-page__buy-event {

@@ -62,23 +62,24 @@ const ArticlePage = ({ articleId }) => {
             //         </div>
             //     </div>
             // </div>
-            <div className="article-page">
+            <div className="article-page mt-3">
                 <div className="article-page__buttons">
                     <button
-                        className="btn btn-sm btn-primary m-1"
+                        style={{ backgroundColor: "#F7AB0A", color: "white" }}
+                        className="btn btn"
                         onClick={handleBack}
                     >
                         Назад
                     </button>
                     <button
-                        className="btn btn-sm btn-primary"
+                        style={{ backgroundColor: "#F7AB0A", color: "white" }}
+                        className="btn btn"
                         onClick={handleEdit}
                     >
                         Редактировать
                     </button>
                 </div>
-                <h1 className="article-page__title">{article.title}</h1>
-                <div className="article-page__content">
+                <div className="article-page__content mt-3 mb-3">
                     <div className="article-page__left">
                         <img
                             className="article-page__image"
@@ -87,16 +88,33 @@ const ArticlePage = ({ articleId }) => {
                         />
                     </div>
                     <div className="article-page__right">
-                        <strong>Дата проведения: </strong> {article.date}{" "}
-                        <strong>Время проведения: </strong>
-                        {article.update} <strong>Место проведения: </strong>{" "}
-                        {article.adress}
+                        <h1 className="article-page__title">{article.title}</h1>
+                        <div className="d-flex flex-column">
+                            <div>
+                                <strong>Дата проведения: </strong>
+                                {article.date}
+                            </div>
+                            <div>
+                                <strong>Время проведения: </strong>
+                                {article.update}
+                            </div>
+                            <div>
+                                <strong>Место проведения: </strong>
+                                {article.adress}
+                            </div>
+                            <div className="d-flex align-items-center">
+                                <div className="secondary-text">
+                                    <strong>
+                                        <strong>Жанры: </strong>
+                                    </strong>
+                                </div>
+                                <TagsList tags={article.tags} />
+                            </div>
+                        </div>
                         <div>
                             <strong>Описание:</strong>
                         </div>
                         <p>{article.text}</p>
-                        <p className="secondary-text">Популярные метки:</p>
-                        <TagsList tags={article.tags} />
                         <div className="article-page__buy-event">
                             <CartBuy article={article} />
                         </div>

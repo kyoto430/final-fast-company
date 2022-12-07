@@ -46,7 +46,10 @@ const Article = (article) => {
                                 {/* <div className="d-flex justify-content-end align-items-center">
                             <TagsList tags={tags} />
                         </div> */}
-                                <h5 className="card-title text-start fs-6">
+                                <h5
+                                    style={{ height: "70px" }}
+                                    className="card-title text-start fs-6"
+                                >
                                     {title}
                                 </h5>
                                 <div className="d-flex align-items-center">
