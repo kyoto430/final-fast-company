@@ -9,6 +9,7 @@ import ItemsInCart from "./itemsInCart";
 function CartBlock() {
     const [isCartMenuVisible, setIsCartMenuVisible] = useState(false);
     const items = useSelector((state) => state.cart.itemsInCart);
+    // const bookingItems = useSelector((state) => state.seat.itemsInCart);
     const totalPrice = calcTotalPrice(items);
     const history = useHistory();
     const handleBuy = useCallback(() => {

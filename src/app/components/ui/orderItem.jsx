@@ -10,17 +10,22 @@ function OrderItem({ article }) {
         dispatch(deleteItemFromCart(article._id));
     };
     return (
-        <div className="order-item">
+        <div className="order-item border-bottom pb-1">
             <div className="order-item__cover">
-                <img width={200} src={article.image} alt={article.title} />
+                <img
+                    className="rounded"
+                    width={200}
+                    src={article.image}
+                    alt={article.title}
+                />
             </div>
             <div className="order-item__title">
-                <span>{article.title}</span>
+                <div>{article.title}</div>
             </div>
             <div className="order-item__price">
                 <span>{article.price} руб.</span>
                 <AiOutlineCloseCircle
-                    size={25}
+                    size={37}
                     className="cart-item__delete-icon"
                     onClick={handleDelete}
                 />
