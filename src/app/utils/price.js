@@ -1,2 +1,2 @@
 export const calcTotalPrice = (items) =>
-    items.reduce((a, event) => (a += event.price), 0);
+    items.reduce((a, event) => (a += parseInt(event.price)), 0);

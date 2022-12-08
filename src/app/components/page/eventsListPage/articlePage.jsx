@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import API from "../../../api";
 import TagsList from "../../ui/tags/tagsList";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Loader from "../../ui/loader";
 import CartBuy from "../../ui/cartBuy";
 
@@ -89,7 +89,7 @@ const ArticlePage = ({ articleId }) => {
                     </div>
                     <div className="article-page__right">
                         <h1 className="article-page__title">{article.title}</h1>
-                        <div className="d-flex flex-column">
+                        <div className="d-flex flex-column border-top border-bottom">
                             <div>
                                 <strong>Дата проведения: </strong>
                                 {article.date}
@@ -115,7 +115,12 @@ const ArticlePage = ({ articleId }) => {
                             <strong>Описание:</strong>
                         </div>
                         <p>{article.text}</p>
-                        <div className="article-page__buy-event">
+                        <div className="article-page__buy-event d-flex">
+                            <Link to={"/booking"}>
+                                <div className="btn btn-primary">
+                                    Выбрать места
+                                </div>
+                            </Link>
                             <CartBuy article={article} />
                         </div>
                     </div>

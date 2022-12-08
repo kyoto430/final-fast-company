@@ -20,7 +20,8 @@ const articles = [
         image: "https://ms1.relax.by/images/d4b21593f3f04b3b118e37d5e68927ff/thumb/w%3D400%2Ch%3D600%2Cq%3D90/afisha_event_photo/50/97/65/5097653883533eb729395491e4e82ea9.jpg",
         adress: "ул. К. Маркса, 12",
         bookmark: false,
-        price: 50
+        price: 50,
+        value: 0
     },
     {
         _id: "67rdca1816",

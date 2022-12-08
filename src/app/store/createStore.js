@@ -3,6 +3,7 @@ import professionsReducer from "./professions";
 import qualitiesReducer from "./qualities";
 import usersReducer from "./users";
 import cartReducer from "./cart";
+import seatReducer from "./seats";
 
 const { combineReducers, configureStore } = require("@reduxjs/toolkit");
 
@@ -11,7 +12,8 @@ const rootReducer = combineReducers({
     professions: professionsReducer,
     users: usersReducer,
     comments: commentsReducer,
-    cart: cartReducer
+    cart: cartReducer,
+    seat: seatReducer
 });
 
 export function createStore() {

@@ -73,8 +73,8 @@ a {
     color: white;
     width: 500px;
     padding: 10px 20px;
-    z-index: 2;
-    font-size: 14px;
+    z-index: 999;
+    font-size: 18px;
     border-radius: 15px;
 }
 
@@ -174,7 +174,10 @@ a {
 
 .order-item {
     display: flex;
+    width: 800px;
+    margin: 0 auto;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .order-item__cover {
@@ -188,7 +191,19 @@ a {
 }
 
 .order-item__price {
-    font-style: 24px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 23px;
     font-weight: bold;
     margin-left: auto;
+}
+
+.order-page__total-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(85, 88, 237);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
 }

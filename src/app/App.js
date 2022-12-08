@@ -12,6 +12,7 @@ import ProtectedRoute from "./components/common/protectedRoute";
 import LogOut from "./layouts/logOut";
 import AppLoader from "./components/ui/hoc/appLoader";
 import CartPage from "./components/page/cartPage";
+import BookingPage from "./components/page/bookingPage/bookingPage";
 
 function App() {
     return (
@@ -34,6 +35,7 @@ function App() {
                         component={AddArticlePage}
                     />
                     <ProtectedRoute path="/order" component={CartPage} />
+                    <ProtectedRoute path="/booking" component={BookingPage} />
                     <Route
                         path="/articles/:articleId?/:edit?"
                         component={Events}
