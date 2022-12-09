@@ -16,6 +16,8 @@ const Article = (article) => {
         // update,
         // adress,
         date
+        // onIncrement,
+        // onDecrement
         // bookmark
         // onToggleBookMark
     } = article;
@@ -79,7 +81,11 @@ const Article = (article) => {
                                 status={bookmark}
                                 onClick={() => onToggleBookMark(_id)}
                             /> */}
-                <CartBuy article={article} />
+                <CartBuy
+                    article={article}
+                    // onIncrement={onIncrement}
+                    // onDecrement={onDecrement}
+                />
             </div>
         </div>
     );
@@ -97,7 +103,9 @@ Article.propTypes = {
     status: PropTypes.bool,
     update: PropTypes.string,
     date: PropTypes.string,
-    onToggleBookMark: PropTypes.func
+    onToggleBookMark: PropTypes.func,
+    onIncrement: PropTypes.func,
+    onDecrement: PropTypes.func
 };
 
 export default Article;

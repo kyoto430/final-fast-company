@@ -34,17 +34,37 @@ const ArticlesList = () => {
     //     setArticles(articles.filter((article) => article._id !== articleId));
     // };
 
-    const handleToggleBookMark = (id) => {
-        setArticles(
-            articles.map((article) => {
-                if (article._id === id) {
-                    article.bookmark = !article.bookmark;
-                    return article;
-                }
-                return article;
-            })
-        );
-    };
+    // const handleIncrement = (productId) => {
+    //     const newProducts = [...articles];
+    //     const elementIndex = newProducts.findIndex(
+    //         (product) => product._id === productId
+    //     );
+    //     newProducts[elementIndex].value++;
+    //     setArticles(newProducts);
+    // };
+    // const handleDecrement = (productId) => {
+    //     const newProducts = [...articles];
+    //     const elementIndex = newProducts.findIndex(
+    //         (product) => product._id === productId
+    //     );
+    //     if (newProducts[elementIndex].value > 0) {
+    //         newProducts[elementIndex].value--;
+    //     }
+    //     setArticles(newProducts);
+    // };
+
+    // const handleToggleBookMark = (id) => {
+    //     setArticles(
+    //         articles.map((article) => {
+    //             if (article._id === id) {
+    //                 article.bookmark = !article.bookmark;
+    //                 return article;
+    //             }
+    //             return article;
+    //         })
+    //     );
+    // };
+
     const handleSort = (item) => {
         setSortBy(item);
     };
@@ -87,7 +107,7 @@ const ArticlesList = () => {
         const articleCrop = paginate(sortedArticles, currentPage, pageSize);
 
         return (
-            <div className="d-flex flex-column ">
+            <div className="d-flex flex-column">
                 {ligues && (
                     <div className="d-flex flex-column p-3">
                         <GroupList
@@ -122,7 +142,9 @@ const ArticlesList = () => {
                             onSort={handleSort}
                             selectedSort={sortBy}
                             // onDelete={handleDelete}
-                            onToggleBookMark={handleToggleBookMark}
+                            // onToggleBookMark={handleToggleBookMark}
+                            // onIncrement={handleIncrement}
+                            // onDecrement={handleDecrement}
                         />
                     )}
                     <div className="d-flex justify-content-center">

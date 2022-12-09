@@ -15,7 +15,7 @@ const UserCard = ({ user }) => {
             <div className="card-body">
                 {currentUser._id === user._id && (
                     <button
-                        className="position-absolute top-0 end-0 btn btn-sm btn-primary"
+                        className="btn btn-sm btn-primary mb-1"
                         onClick={handleClick}
                     >
                         Редактировать <i className="bi bi-gear"></i>

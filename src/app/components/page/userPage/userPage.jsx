@@ -10,15 +10,19 @@ import { getUserById } from "../../../store/users";
 
 const UserPage = ({ userId }) => {
     const user = useSelector(getUserById(userId));
-
+    // const bilets = JSON.parse(localStorage.getItem("bookSeats"));
     if (user) {
         return (
-            <div className="container">
+            <div className="container mt-4">
                 <div className="row gutters-sm">
                     <div className="col-md-4 mb-3">
                         <UserCard user={user} />
                         <QualitiesCard data={user.qualities} />
                         <MeetingsCard value={user.completedMeetings} />
+                        {/* <div className="d-flex justify-content-center align-items-center fs-5 fw-bold">
+                            <div>Мои билеты: </div>
+                            <div> {bilets}</div>
+                        </div> */}
                     </div>
                     <div className="col-md-8">
                         <Comments />

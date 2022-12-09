@@ -9,8 +9,9 @@ import ItemsInCart from "./itemsInCart";
 function CartBlock() {
     const [isCartMenuVisible, setIsCartMenuVisible] = useState(false);
     const items = useSelector((state) => state.cart.itemsInCart);
+    const value = useSelector((state) => state.cart.count);
     // const bookingItems = useSelector((state) => state.seat.itemsInCart);
-    const totalPrice = calcTotalPrice(items);
+    const totalPrice = calcTotalPrice(items, value);
     const history = useHistory();
     const handleBuy = useCallback(() => {
         console.log("Buy");
@@ -31,7 +32,7 @@ function CartBlock() {
                 </span>
             ) : null}
             {isCartMenuVisible && (
-                <CartMenu items={items} onClick={handleBuy} />
+                <CartMenu items={items} onClick={handleBuy} value={value} />
             )}
         </div>
     );

@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setItemAvailableSeats, setItemSeat } from "../../../store/seats";
 import Seats from "./seats";
 
 const createSeats = (rows, startIndex) => {
@@ -22,28 +20,16 @@ const createSeats = (rows, startIndex) => {
     return section;
 };
 
+const defaultState = ["1A", "1B", "2A", "2B", "10A", "10B"];
+
 function BookSeats() {
-    const dispatch = useDispatch();
-    const itemsavailableItems = useSelector(
-        (state) => state.seat.availableItems
-    );
-    const test = itemsavailableItems.map((e, index) => index);
-    console.log("items", test);
     const premiumSeats = createSeats(2, "1");
     const normalSeats = createSeats(10, "3");
-    const [availableSeats, setAvailableSeats] = useState([
-        "1A",
-        "1B",
-        "2A",
-        "2B",
-        "10A",
-        "10B"
-    ]);
-    console.log("свободные места", availableSeats);
+    const [availableSeats, setAvailableSeats] = useState(
+        JSON.parse(localStorage.getItem("avSeats")) || defaultState
+    );
     const [bookedSeats, setBookedSeats] = useState([]);
-    console.log("забронированные места:", bookedSeats);
     const [bookedStatus, setBookedStatus] = useState("");
-    console.log("статус:", bookedSeats);
     const addSeat = (ev) => {
         if (numberOfSeats && !ev.target.className.includes("disabled")) {
             const seatsToBook = parseInt(numberOfSeats, 10);
@@ -65,7 +51,6 @@ function BookSeats() {
 
     const confirmBooking = () => {
         setBookedStatus("Вы успешно забронировали места: ");
-        dispatch(setItemSeat(bookedSeats));
         bookedSeats.forEach((seat) => {
             setBookedStatus((prevState) => {
                 return prevState + seat + " ";
@@ -74,7 +59,8 @@ function BookSeats() {
         const newAvailableSeats = availableSeats.filter(
             (seat) => !bookedSeats.includes(seat)
         );
-        dispatch(setItemAvailableSeats(newAvailableSeats));
+        localStorage.setItem("avSeats", JSON.stringify(newAvailableSeats));
+        localStorage.setItem("bookSeats", JSON.stringify(bookedSeats));
         setAvailableSeats(newAvailableSeats);
         setBookedSeats([]);
         setNumberOfSeats(0);
@@ -83,12 +69,16 @@ function BookSeats() {
 
     return (
         <div className="mt-3 pb-3">
-            <p>Сколько мест вы хотите забронировать?</p>
-            <input
-                className="border"
-                value={numberOfSeats}
-                onChange={(ev) => setNumberOfSeats(ev.target.value)}
-            />
+            {availableSeats.length !== 0 ? (
+                <>
+                    <p>Сколько мест вы хотите забронировать?</p>
+                    <input
+                        className="border"
+                        value={numberOfSeats}
+                        onChange={(ev) => setNumberOfSeats(ev.target.value)}
+                    />
+                </>
+            ) : null}
             <Seats
                 values={premiumSeats}
                 availableSeats={availableSeats}
@@ -102,13 +92,17 @@ function BookSeats() {
                 addSeat={addSeat}
             />
 
-            <button
-                style={{ backgroundColor: "rgb(85, 88, 237)" }}
-                className="btn text-white"
-                onClick={confirmBooking}
-            >
-                Забронировать
-            </button>
+            {availableSeats.length !== 0 ? (
+                <button
+                    style={{ backgroundColor: "rgb(85, 88, 237)" }}
+                    className="btn text-white"
+                    onClick={confirmBooking}
+                >
+                    Забронировать
+                </button>
+            ) : (
+                <div className="mt-3 fw-bold">Все места забронированы!</div>
+            )}
             <p className="mt-3 mb-3 fw-bold">{bookedStatus}</p>
         </div>
     );

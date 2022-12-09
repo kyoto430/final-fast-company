@@ -81,9 +81,9 @@ const UsersListPage = () => {
     };
 
     return (
-        <div className="d-flex justify-content-center container">
+        <div className="d-flex justify-content-center container mt-3">
             {professions && !professionsLoading && (
-                <div className="d-flex flex-column justify-content-center flex-shrink-0 p-3 card">
+                <div className="d-flex flex-column justify-content-start flex-shrink-0 p-3">
                     <GroupList
                         selectedItem={selectedProf}
                         items={professions}

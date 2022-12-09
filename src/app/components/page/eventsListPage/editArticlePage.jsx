@@ -57,7 +57,6 @@ const EditArticlePage = () => {
                 tags: getTags(tags)
             })
             .then((data) => history.push(`/articles/${data._id}`));
-        console.log(data);
     };
     const transformData = (data) => {
         return data.map((tag) => ({ label: tag.name, value: tag._id }));

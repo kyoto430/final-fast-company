@@ -34,7 +34,8 @@ const articles = [
         image: "https://ms1.relax.by/images/d4b21593f3f04b3b118e37d5e68927ff/thumb/w%3D400%2Ch%3D600%2Cq%3D90/afisha_event_photo/24/c3/11/24c311a5e9277d12ab5164a8a3259058.jpg",
         adress: "ул. Притыцкого, 83",
         bookmark: false,
-        price: 150
+        price: 150,
+        value: 0
     },
     {
         _id: "67rdca1817",
@@ -47,7 +48,8 @@ const articles = [
         image: "https://ms1.relax.by/images/d4b21593f3f04b3b118e37d5e68927ff/thumb/w%3D400%2Ch%3D600%2Cq%3D90/afisha_event_photo/c5/3e/59/c53e5965ccdc58a04c4adefbf0c450a8.jpg",
         adress: "ул. Богдановича, 9А",
         bookmark: false,
-        price: 20
+        price: 20,
+        value: 0
     },
     {
         _id: "67rdca1818",
@@ -60,7 +62,8 @@ const articles = [
         image: "https://ms1.relax.by/images/d4b21593f3f04b3b118e37d5e68927ff/thumb/w%3D400%2Ch%3D600%2Cq%3D90/afisha_event_photo/62/f6/18/62f6183fab964696a1025b4215f56393.jpg",
         adress: "ул. Козлова, 4а",
         bookmark: false,
-        price: 80
+        price: 80,
+        value: 0
     }
 ];
 

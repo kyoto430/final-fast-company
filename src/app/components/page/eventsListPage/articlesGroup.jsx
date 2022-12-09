@@ -7,7 +7,9 @@ const ArticlesGroup = ({
     articles,
     onSort,
     selectedSort,
-    onToggleBookMark
+    onToggleBookMark,
+    onIncrement,
+    onDecrement
 }) => {
     const columns = {
         title: { iter: "title", title: "названию" },
@@ -23,6 +25,7 @@ const ArticlesGroup = ({
                     <Article
                         key={article._id}
                         {...article}
+                        // {...{ onIncrement, onDecrement }}
                         // {...{ onToggleBookMark }}
                     />
                 ))}
@@ -35,7 +38,9 @@ ArticlesGroup.propTypes = {
     articles: PropTypes.array.isRequired,
     onSort: PropTypes.func.isRequired,
     selectedSort: PropTypes.object.isRequired,
-    onToggleBookMark: PropTypes.func
+    onToggleBookMark: PropTypes.func,
+    onIncrement: PropTypes.func,
+    onDecrement: PropTypes.func
 };
 
 export default ArticlesGroup;

@@ -37,7 +37,7 @@ const Comment = ({ data, created_at: created, _id: id, userId, onRemove }) => {
                                         </button>
                                     )}
                                 </div>
-                                <p className="small mb-0">{data.content}</p>
+                                <p className="small mb-0">{data?.content}</p>
                             </div>
                         </div>
                     </div>
