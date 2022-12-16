@@ -13,6 +13,7 @@ import LogOut from "./layouts/logOut";
 import AppLoader from "./components/ui/hoc/appLoader";
 import CartPage from "./components/page/cartPage";
 import BookingPage from "./components/page/bookingPage/bookingPage";
+import MyOrders from "./layouts/myOrders";
 
 function App() {
     return (
@@ -40,6 +41,7 @@ function App() {
                         path="/articles/:articleId?/:edit?"
                         component={Events}
                     />
+                    <Route path="/myOrders" component={MyOrders} />
                     <Route path="/login/:type?" component={Login} />
                     <Route path="/logout" component={LogOut} />
                     <Route path="/" exact component={Main} />
