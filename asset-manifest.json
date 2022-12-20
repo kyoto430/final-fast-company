@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/final-fast-company/static/css/main.405afd30.chunk.css",
-    "main.js": "/final-fast-company/static/js/main.130badea.chunk.js",
-    "main.js.map": "/final-fast-company/static/js/main.130badea.chunk.js.map",
-    "runtime-main.js": "/final-fast-company/static/js/runtime-main.06202704.js",
-    "runtime-main.js.map": "/final-fast-company/static/js/runtime-main.06202704.js.map",
+    "main.css": "/final-fast-company/static/css/main.c42ca289.chunk.css",
+    "main.js": "/final-fast-company/static/js/main.ed479f23.chunk.js",
+    "main.js.map": "/final-fast-company/static/js/main.ed479f23.chunk.js.map",
+    "runtime-main.js": "/final-fast-company/static/js/runtime-main.dc49f2f5.js",
+    "runtime-main.js.map": "/final-fast-company/static/js/runtime-main.dc49f2f5.js.map",
     "static/css/2.40abe5ac.chunk.css": "/final-fast-company/static/css/2.40abe5ac.chunk.css",
-    "static/js/2.7135d525.chunk.js": "/final-fast-company/static/js/2.7135d525.chunk.js",
-    "static/js/2.7135d525.chunk.js.map": "/final-fast-company/static/js/2.7135d525.chunk.js.map",
-    "static/js/3.c483d251.chunk.js": "/final-fast-company/static/js/3.c483d251.chunk.js",
-    "static/js/3.c483d251.chunk.js.map": "/final-fast-company/static/js/3.c483d251.chunk.js.map",
+    "static/js/2.0e97217e.chunk.js": "/final-fast-company/static/js/2.0e97217e.chunk.js",
+    "static/js/2.0e97217e.chunk.js.map": "/final-fast-company/static/js/2.0e97217e.chunk.js.map",
+    "static/js/3.f7c12784.chunk.js": "/final-fast-company/static/js/3.f7c12784.chunk.js",
+    "static/js/3.f7c12784.chunk.js.map": "/final-fast-company/static/js/3.f7c12784.chunk.js.map",
     "index.html": "/final-fast-company/index.html",
     "static/css/2.40abe5ac.chunk.css.map": "/final-fast-company/static/css/2.40abe5ac.chunk.css.map",
-    "static/css/main.405afd30.chunk.css.map": "/final-fast-company/static/css/main.405afd30.chunk.css.map",
-    "static/js/2.7135d525.chunk.js.LICENSE.txt": "/final-fast-company/static/js/2.7135d525.chunk.js.LICENSE.txt"
+    "static/css/main.c42ca289.chunk.css.map": "/final-fast-company/static/css/main.c42ca289.chunk.css.map",
+    "static/js/2.0e97217e.chunk.js.LICENSE.txt": "/final-fast-company/static/js/2.0e97217e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.06202704.js",
+    "static/js/runtime-main.dc49f2f5.js",
     "static/css/2.40abe5ac.chunk.css",
-    "static/js/2.7135d525.chunk.js",
-    "static/css/main.405afd30.chunk.css",
-    "static/js/main.130badea.chunk.js"
+    "static/js/2.0e97217e.chunk.js",
+    "static/css/main.c42ca289.chunk.css",
+    "static/js/main.ed479f23.chunk.js"
   ]
 }
