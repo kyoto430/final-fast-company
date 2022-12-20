@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import API from "../../../api";
 import TagsList from "../../ui/tags/tagsList";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Loader from "../../ui/loader";
 import CartBuy from "../../ui/cartBuy";
 
@@ -116,11 +116,11 @@ const ArticlePage = ({ articleId }) => {
                         </div>
                         <p>{article.text}</p>
                         <div className="article-page__buy-event d-flex">
-                            {/* <Link to={"/booking"}>
+                            <Link to={"/booking"}>
                                 <div className="btn btn-primary">
                                     Выбрать места
                                 </div>
-                            </Link> */}
+                            </Link>
                             <CartBuy article={article} />
                         </div>
                     </div>
