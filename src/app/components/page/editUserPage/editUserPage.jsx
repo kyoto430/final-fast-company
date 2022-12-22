@@ -111,7 +111,7 @@ const EditUserPage = () => {
     };
     const isValid = Object.keys(errors).length === 0;
     return (
-        <div className="container mt-5">
+        <div className="container mt-1">
             <BackHistoryButton />
             <div className="row">
                 <div className="col-md-6 offset-md-3 shadow p-4">

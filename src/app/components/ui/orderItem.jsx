@@ -14,7 +14,7 @@ function OrderItem({ article }) {
             <div className="order-item__cover">
                 <img
                     className="rounded"
-                    width={200}
+                    width={100}
                     src={article.image}
                     alt={article.title}
                 />
