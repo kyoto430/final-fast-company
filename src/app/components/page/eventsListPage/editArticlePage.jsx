@@ -150,6 +150,13 @@ const EditArticlePage = () => {
                                 value={data.adress}
                                 onChange={handleChange}
                             />
+                            <MultiSelectField
+                                defaultValue={data.tags}
+                                options={tags}
+                                onChange={handleChange}
+                                name="tags"
+                                label="Выберите теги"
+                            />
                             <TextField
                                 label="Цена билета"
                                 name="price"
@@ -161,13 +168,6 @@ const EditArticlePage = () => {
                                 name="image"
                                 value={data.image}
                                 onChange={handleChange}
-                            />
-                            <MultiSelectField
-                                defaultValue={data.tags}
-                                options={tags}
-                                onChange={handleChange}
-                                name="tags"
-                                label="Выберите теги"
                             />
                             <button
                                 type="submit"

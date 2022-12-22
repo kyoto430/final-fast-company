@@ -19,10 +19,6 @@ const UserPage = ({ userId }) => {
                         <UserCard user={user} />
                         <QualitiesCard data={user.qualities} />
                         <MeetingsCard value={user.completedMeetings} />
-                        {/* <div className="d-flex justify-content-center align-items-center fs-5 fw-bold">
-                            <div>Мои билеты: </div>
-                            <div> {bilets}</div>
-                        </div> */}
                     </div>
                     <div className="col-md-8">
                         <Comments />

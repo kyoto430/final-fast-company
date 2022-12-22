@@ -4,7 +4,8 @@ const cartSlice = createSlice({
     name: "cart",
     initialState: {
         itemsInCart: [],
-        count: 0
+        count: 0,
+        bilets: []
     },
     reducers: {
         setItemInCart: (state, action) => {
@@ -15,6 +16,12 @@ const cartSlice = createSlice({
                 (event) => event._id !== action.payload
             );
             state.count = 0;
+        },
+        deleteAllCart: (state, action) => {
+            state.itemsInCart = state.itemsInCart = [];
+        },
+        setBilets: (state, action) => {
+            state.bilets.push(action.payload);
         },
         setCount: (state, action) => {
             state.count = action.payload;
@@ -31,6 +38,8 @@ const cartSlice = createSlice({
 export const {
     setItemInCart,
     deleteItemFromCart,
+    deleteAllCart,
+    setBilets,
     increment,
     decrement,
     setCount

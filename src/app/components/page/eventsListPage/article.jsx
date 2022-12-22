@@ -36,7 +36,8 @@ const Article = (article) => {
                         <div className="d-flex align-items-center">
                             <img
                                 style={{
-                                    borderRadius: "10px"
+                                    borderRadius: "10px",
+                                    width: "250px"
                                 }}
                                 src={image}
                                 className="img-fluid p-1 m-auto"
