@@ -20,6 +20,12 @@ const cartSlice = createSlice({
         deleteAllCart: (state, action) => {
             state.itemsInCart = state.itemsInCart = [];
         },
+        // changeValue: (state, action) => {
+        //     const item = state.itemsInCart.find(
+        //         (item) => item._id === action.payload
+        //     );
+        //     console.log((item.value += 1));
+        // },
         setBilets: (state, action) => {
             state.bilets.push(action.payload);
         },
@@ -42,6 +48,7 @@ export const {
     setBilets,
     increment,
     decrement,
-    setCount
+    setCount,
+    changeValue
 } = cartSlice.actions;
 export default cartSlice.reducer;
